@@ -1,0 +1,37 @@
+.social {
+  height: 40px;
+}
+
+.social__link {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  font-size: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+  }
+
+  &--instagramm::after {
+    background: transparent url("../img/icon-insta.svg") no-repeat;
+    background-position: 50% 50%;
+    left: 0;
+  }
+
+  &--facebook::after {
+    background: transparent url("../img/icon-fb.svg") no-repeat;
+    background-position: 50% 50%;
+    left: 40px;
+  }
+
+  &--twitter::after {
+    background: transparent url("../img/icon-twitter.svg") no-repeat;
+    background-position: 50% 50%;
+    left: 80px;
+  }
+}

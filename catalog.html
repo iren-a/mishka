@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="page-header">
@@ -36,10 +37,10 @@
   <section class="catalog">
     <div class="catalog-item">
       <a class="catalog-item__image" href="#">
-        <img src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик-попрыгайчик">
+        <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
       </a>
-      <h2 class="catalog-item__title">
-        <a href="#">
+      <h2>
+        <a class="catalog-item__title" href="#">
           Зайчик-попрыгайчик
         </a>
       </h2>
@@ -49,10 +50,10 @@
     </div>
     <div class="catalog-item">
       <a class="catalog-item__image" href="#">
-        <img src="http://placehold.it/260x195" width="260" height="195" alt="Корзинка для белья">
+        <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
       </a>
-      <h2 class="catalog-item__title">
-        <a href="#">
+      <h2>
+        <a class="catalog-item__title" href="#">
           Корзинка для белья
         </a>
       </h2>
@@ -62,10 +63,10 @@
     </div>
     <div class="catalog-item">
       <a class="catalog-item__image" href="#">
-        <img src="http://placehold.it/260x195" width="260" height="195" alt="Большая корзинка для игрушек">
+        <img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
       </a>
-      <h2 class="catalog-item__title">
-        <a href="#">
+      <h2>
+        <a class="catalog-item__title" href="#">
           Большая корзинка для игрушек
         </a>
       </h2>
@@ -76,7 +77,7 @@
   </section>
   <section class="production-process">
     <h2 class="production-process__title">Процесс производства</h2>
-    <video preload="none" width="260" height="150" poster="http://placehold.it/260x150"></video>
+    <video class="production-process__video" preload="none" width="260" height="150" poster="http://placehold.it/260x150"></video>
     <p class="production-process__descr">
       По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
     </p>
@@ -89,9 +90,7 @@
     <a class="social__link social__link--facebook" href="#">Фейсбук</a>
     <a class="social__link social__link--twitter" href="#">Твиттер</a>
   </section>
-  <p class="page-footer__designed">
-    <a href="#">Разработано</a>
-  </p>
+  <a class="page-footer__designed" href="#">Разработано</a>
 </footer>
 <div class="modal-content">
   <form class="modal-content__form" action="https://echo.htmlacademy.ru/" method="post">
