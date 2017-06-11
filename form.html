@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="page-header">
@@ -38,14 +39,14 @@
   <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
     <p class="order-form__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
       свяжемся с вами, чтобы уточнить детали.</p>
-    <fieldset class="order-form__input-type">
+    <fieldset class="order-form__fieldset order-form__fieldset--type">
       <legend class="order-form__legend">Тип</legend>
       <input id="type-1" name="type" type="checkbox" value="accessory" checked>
       <label for="type-1">Аксессуар для интерьера</label>
       <input id="type-2" name="type" type="checkbox" value="toy">
       <label for="type-2">Детская игрушка</label>
     </fieldset>
-    <fieldset class="order-form__input-color">
+    <fieldset class="order-form__fieldset order-form__fieldset--color">
       <legend class="order-form__legend">Цвет</legend>
       <input id="color-1" name="color" type="checkbox" value="white" checked>
       <label for="color-1">Белый</label>
@@ -60,7 +61,7 @@
       <input id="color-6" name="color" type="checkbox" value="orange">
       <label for="color-6">Оранжевый</label>
     </fieldset>
-    <fieldset class="order-form__input-name">
+    <fieldset class="order-form__fieldset order-form__fieldset--name">
       <legend class="order-form__legend">ФИО</legend>
       <label for="firstname">Имя:</label>
       <input id="firstname" name="firstname" type="text" placeholder="Введите ваше имя*" required>
@@ -69,15 +70,15 @@
       <label for="middlename">Отчество:</label>
       <input id="middlename" name="middlename" type="text" placeholder="Отчество, если желаете">
     </fieldset>
-    <fieldset class="order-form__input-tel">
+    <fieldset class="order-form__fieldset order-form__fieldset--tel">
       <legend class="order-form__legend">Тел</legend>
       <input id="tel" name="tel" type="tel" placeholder="+7 ХХХ ХХ ХХ*" pattern="^(\+7) [0-9]{3} [0-9]{2} [0-9]{2}" required>
     </fieldset>
-    <fieldset class="order-form__input-email">
+    <fieldset class="order-form__fieldset order-form__fieldset--email">
       <legend class="order-form__legend">E-mail</legend>
       <input id="email" name="email" type="email" placeholder="Ваш Email*" required>
     </fieldset>
-    <fieldset class="order-form__input-comment">
+    <fieldset class="order-form__fieldset order-form__fieldset--comment">
       <legend class="order-form__legend">Доп</legend>
       <textarea id="comment" name="comment" cols="25" rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
     </fieldset>
@@ -93,9 +94,7 @@
     <a class="social__link social__link--facebook" href="#">Фейсбук</a>
     <a class="social__link social__link--twitter" href="#">Твиттер</a>
   </section>
-  <p class="page-footer__designed">
-    <a href="#">Разработано</a>
-  </p>
+  <a class="page-footer__designed" href="#">Разработано</a>
 </footer>
 </body>
 </html>
