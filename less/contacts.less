@@ -1,8 +1,8 @@
 .contacts {
-  padding-left: 30px;
-  padding-right: 30px;
-  font-family: @font-family-base;
-  color: @color-font-grey;
+  .container();
+  box-sizing: border-box;
+  padding: 0 30px;
+  color: @color-dark-grey;
 }
 
 .contacts__title {
@@ -10,4 +10,71 @@
   font-size: 18px;
   line-height: 30px;
   color: black;
+}
+
+.contacts__map {
+  margin-left: -30px;
+  width: 320px;
+}
+
+.contacts__action-write {
+  margin: 40px 0;
+}
+
+@media @tablet-width {
+  .contacts {
+    padding: 0 50px;
+  }
+
+  .contacts__title {
+    font-size: 43px;
+    font-weight: 50px;
+  }
+
+  .contacts__info tbody {
+    display: flex;
+  }
+
+  .contacts__type {
+    vertical-align: top;
+  }
+
+  .contacts__value {
+    width: 250px;
+  }
+
+  .contacts__map {
+    margin-left: -50px;
+    width: 768px;
+  }
+
+  .contacts__action-write {
+    width: 230px;
+    margin: 55px auto;
+  }
+}
+
+@media @desktop-width {
+  .contacts {
+    position: relative;
+    padding-left: 275px;
+    padding-right: 100px;
+  }
+
+  .contacts__info tbody {
+    display: table;
+  }
+
+  .contacts__map {
+    width: 525px;
+    position: absolute;
+    top: 0;
+    right: 100px;
+  }
+
+  .contacts__action-write {
+    margin-left: 0;
+    margin-top: 250px;
+  }
+
 }
