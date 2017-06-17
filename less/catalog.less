@@ -1,3 +1,20 @@
 .catalog {
+  .container();
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+@media @tablet-width {
+  .catalog {
+    padding: 50px;
+  }
+}
+
+@media @desktop-width {
+  .catalog {
+    padding: 0 100px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
 }
