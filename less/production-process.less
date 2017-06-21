@@ -1,27 +1,80 @@
 .production-process {
   .container();
+  position: relative;
   box-sizing: border-box;
   width: 260px;
   min-height: 374px;
   padding: 0 30px;
-  margin-bottom: 30px;
+  margin-top: 0;
   border: 1px solid @color-light-gray;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .1);
+  }
 }
 
 .production-process__video {
+  position: relative;
+  width: 260px;
+  background: url("../img/video-mobile@1x.jpg") no-repeat;
   margin-left: -31px;
 }
 
+.production-process__video-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.production-process__btn-svg {
+  &:hover {
+    width: 120px;
+    height: 92px;
+  }
+
+  &:active {
+    width: 80px;
+    height: 60px;
+    opacity: 0.3;
+  }
+}
+
 .production-process__title {
+  position: relative;
+  padding-left: 60px;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
+  margin-top: 22px;
+  margin-bottom: 24px;
+}
+
+.production-process__title-svg {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  fill: @color-sea-green-light;
 }
 
 .production-process__descr {
   font-size: 13px;
   line-height: 24px;
   color: @color-dark-grey;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-right: 15px;
+}
+
+.production-process__action-buy {
+  margin-bottom: 34px;
 }
 
 @media @tablet-width {
@@ -31,8 +84,27 @@
     flex-direction: column;
   }
 
+  .production-process__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .production-process__title-svg {
+    top: 0;
+    left: 0;
+
+  }
+
   .production-process__video {
     order: -1;
+    width: 668px;
+    min-height: 455px;
+  }
+
+  .production-process__action-buy {
+    width: 580px;
+    margin: auto;
+    margin-bottom: 45px;
   }
 }
 
@@ -44,10 +116,32 @@
     padding-right: 57px;
   }
 
+  .production-process__title {
+    padding-top: 75px;
+    padding-left: 0;
+  }
+
+  .production-process__title-svg {
+    top: 20px;
+    left: 0;
+  }
+
   .production-process__video {
     position: absolute;
     margin: 0;
     top: 0;
     left: 0;
+  }
+
+  .production-process__descr {
+    font-size: 15px;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 42px;
+    padding-right: 0;
+  }
+
+  .production-process__action-buy {
+    width: 230px;
   }
 }

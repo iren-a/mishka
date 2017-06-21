@@ -2,7 +2,12 @@
   .container();
   box-sizing: border-box;
   padding: 0 30px;
+  margin-top: 87px;
   color: @color-dark-grey;
+}
+
+.contacts__icon-svg {
+  display: none;
 }
 
 .contacts__title {
@@ -10,11 +15,43 @@
   font-size: 18px;
   line-height: 30px;
   color: black;
+  margin-bottom: 22px;
+}
+
+.contacts__info {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.contacts__type {
+  width: 75px;
+}
+
+.contacts__value,
+.contacts__type {
+  vertical-align: top;
+  padding-bottom: 30px;
+}
+
+.contacts__link {
+  color: @color-dark-grey;
+  text-decoration: none;
+  border-bottom: 1px solid @color-sea-green;
+  padding-bottom: 3px;
+
+  &:hover {
+    color: @color-sea-green
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__map {
   margin-left: -30px;
   width: 320px;
+  background-color: @color-light-gray;
 }
 
 .contacts__action-write {
@@ -23,16 +60,32 @@
 
 @media @tablet-width {
   .contacts {
+    position: relative;
     padding: 0 50px;
+    margin-top: 203px;
+  }
+
+  .contacts__icon-svg {
+    display: block;
+    position: absolute;
+    top: -25px;
+    right: 40px;
   }
 
   .contacts__title {
     font-size: 43px;
     font-weight: 50px;
+    margin-bottom: 55px;
   }
 
   .contacts__info tbody {
     display: flex;
+  }
+
+  .contacts__info {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 22px;
   }
 
   .contacts__type {
@@ -56,9 +109,20 @@
 
 @media @desktop-width {
   .contacts {
-    position: relative;
-    padding-left: 275px;
-    padding-right: 100px;
+    padding-left: 225px;
+    padding-right: 50px;
+    margin-top: 328px;
+  }
+
+  .contacts__icon-svg {
+    top: -10px;
+    left: 106px;
+  }
+
+  .contacts__title {
+    font-size: 53px;
+    line-height: 57px;
+    margin-bottom: 42px;
   }
 
   .contacts__info tbody {
@@ -68,13 +132,13 @@
   .contacts__map {
     width: 525px;
     position: absolute;
-    top: 0;
-    right: 100px;
+    top: -70px;
+    right: 50px;
   }
 
   .contacts__action-write {
-    margin-left: 0;
-    margin-top: 250px;
+    margin-left: 5px;
+    margin-top: 42px;
   }
 
 }

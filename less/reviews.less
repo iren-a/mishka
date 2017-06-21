@@ -2,6 +2,7 @@
   .container();
   box-sizing: border-box;
   padding: 0 30px;
+  margin-top: 60px;
   color: @color-dark-grey;
 }
 
@@ -15,6 +16,11 @@
 .reviews__text {
   font-size: 15px;
   line-height: 30px;
+  margin-bottom: 28px;
+}
+
+.reviews_author {
+  margin-bottom: 30px;
 }
 
 .reviews__author-name {
@@ -22,11 +28,38 @@
   font-size: 17px;
   line-height: 24px;
   color: black;
+  margin-bottom: 2px;
 }
 
 .reviews__author-id {
   font-size: 17px;
   line-height: 30px;
+  margin: 0;
+}
+
+.reviews__controls {
+  display: flex;
+}
+
+.reviews__btn {
+  width: 50%;
+  height: 50px;
+  background-color: white;
+  border: none;
+  font-size: 0;
+  border: 1px solid @color-light-gray;
+
+  &--left {
+    border-right: none;
+  }
+}
+
+.reviews__btn:hover  .reviews__btn-icon {
+  opacity: 0.6;
+}
+
+.reviews__btn:active  .reviews__btn-icon {
+  opacity: 0.3;
 }
 
 .reviews__action-write {
@@ -36,6 +69,7 @@
 @media @tablet-width {
   .reviews {
     padding: 0 50px;
+    margin-top: 130px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -46,12 +80,19 @@
     flex-grow: 1;
     font-size: 43px;
     line-height: 50px;
+    margin-bottom: 32px;
+  }
+
+  .reviews__text {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 40px;
   }
 
   .reviews__action-write {
     order: -1;
-    width: 175px;
-    margin: 0;
+    width: 170px;
+    margin-top: 10px;
   }
 
   .reviews_author {
@@ -59,13 +100,43 @@
     margin: 0;
     flex-grow: 1;
   }
+
+  .reviews__author-name {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .reviews__controls {
+    width: 167px;
+    margin-top: 15px;
+  }
+
+  .reviews__btn {
+    border: none;
+  }
 }
 
 @media @desktop-width {
   .reviews {
     position: relative;
-    padding-left: 275px;
-    padding-right: 100px;
+    margin-top: 120px;
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 225px;
+    padding-right: 50px;
+  }
+
+  .reviews__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .reviews__text {
+    margin-bottom: 20px;
+  }
+
+  .reviews__action-write {
+    margin-top: 20px;
   }
 
 }
