@@ -1,18 +1,30 @@
 .catalog-item {
   box-sizing: border-box;
-  width: 260px;
-  min-height: 374px;
-  margin-bottom: 30px;
   border: 1px solid @color-light-gray;
+  width: 260px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .catalog-item__container {
   padding: 0 30px;
-  display: flex;
-  flex-direction: column;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.1);
+  }
 }
 
 .catalog-item__title {
+  margin-bottom: 5px;
+}
+
+.catalog-item__title-link {
   text-decoration: none;
   font-size: 17px;
   line-height: 24px;
@@ -24,6 +36,36 @@
   font-size: 13px;
   line-height: 30px;
   color: @color-dark-grey;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.calalog-item__buy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid @color-light-gray;
+  padding-top: 5px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+.catalog-item__action-buy {
+  font-size: 0;
+}
+
+.catalog-item__icon-svg {
+  fill: @color-black-gray;
+  opacity: 0.2;
+}
+
+.catalog-item__action-buy:hover .catalog-item__icon-svg  {
+  fill: @color-sea-green-light;
+  opacity: 1;
+}
+
+.catalog-item__action-buy:active .catalog-item__icon-svg  {
+  opacity: 0.3;
 }
 
 .catalog-item__price {
@@ -36,12 +78,42 @@
 @media @tablet-width {
   .catalog-item {
     display: flex;
-    width: 668px;
+    width: auto;
     min-height: 334px;
+    margin-bottom: 54px;
+  }
+
+  .catalog-item__image {
+    box-sizing: border-box;
+    width: 50%;
   }
 
   .catalog-item__container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 50%;
     justify-content: space-between;
+  }
+
+  .catalog-item__title-link {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .catalog-item__properties {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .calalog-item__buy {
+    padding-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .catalog-item__price {
+    font-size: 17px;
+    line-height: 24px;
   }
 }
 
@@ -49,15 +121,26 @@
   .catalog-item {
     display: block;
     width: 314px;
-    min-height: 659px;
     margin-top: 50px;
-
-    &:not(:last-child) {
-      margin-right: 50px;
-    }
+    min-height: auto;
+    margin-bottom: 30px;
   }
 
+  .catalog-item__image {
+    width: auto;
+    display: block;
+    min-height: 463px;
+  }
 
+  .catalog-item__container {
+    width: auto;
+    min-height: 196px;
+  }
+
+  .calalog-item__buy {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
 
 }
