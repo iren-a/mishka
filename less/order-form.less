@@ -9,6 +9,7 @@
   font-size: 13px;
   line-height: 24px;
   color: @color-dark-grey;
+  margin: 0;
 }
 
 .order-form__fieldset {
@@ -16,7 +17,8 @@
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
-  padding: 20px 0;
+  padding: 0;
+  margin-top: 30px;
 }
 
 .order-form__legend {
@@ -39,7 +41,7 @@
 }
 
 .order-form__input-container {
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 }
 
 .order-form__label {
@@ -48,7 +50,8 @@
   padding-left: 62px;
   box-sizing: border-box;
   padding-top: 10px;
-  //padding-bottom: 10px;
+  padding-bottom: 10px;
+  height: 38px;
 }
 
 .order-form__label::before {
@@ -103,19 +106,29 @@
   width: 100%;
   height: 47px;
   border: none;
-  outline: none;
   background: 0 0;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid black;
   box-sizing: border-box;
   font-size: 17px;
   font-weight: 400;
   line-height: 18px;
 }
 
+.order-form__textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 18px;
+}
+
 .order-form__footnote {
   font-size: 14px;
   line-height: 16px;
   color: @color-dark-grey;
+}
+
+.order-form__submit {
+  width: 100%;
 }
 
 @media @tablet-width {
