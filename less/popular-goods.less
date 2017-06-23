@@ -1,10 +1,5 @@
 .popular-goods {
-  .container();
   position: relative;
-  color: @color-dark-grey;
-  box-sizing: border-box;
-  padding: 0 30px;
-  margin-top: 29px;
 
   &::after {
     content: "";
@@ -16,6 +11,15 @@
     background: url(../img/bg-zigzag-line.svg) repeat-x;
     background-size: contain;
   }
+}
+
+.popular-goods__wrapper {
+  .container();
+  position: relative;
+  color: @color-dark-grey;
+  box-sizing: border-box;
+  padding: 0 30px;
+  margin-top: 29px;
 }
 
 .popular-goods__title {
@@ -59,7 +63,10 @@
 .popular-goods__parameter-name,
 .popular-goods__parameter-value {
   border-bottom: 1px solid @color-light-gray;
-  padding: 11px 0;
+  padding-top: 11px;
+  padding-bottom: 10px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .popular-goods__price {
@@ -72,15 +79,15 @@
 }
 
 @media @tablet-width {
-  .popular-goods {
+  .popular-goods::after {
+    bottom: -70px;
+    height: 17px;
+  }
+
+  .popular-goods__wrapper {
     position: relative;
     padding: 0 50px;
     margin-top: 50px;
-
-    &::after {
-      bottom: -70px;
-      height: 17px;
-    }
   }
 
   .popular-goods__title {
@@ -138,14 +145,14 @@
 }
 
 @media @desktop-width {
-  .popular-goods {
+  .popular-goods::after {
+    bottom: -96px;
+    height: 26px;
+  }
+
+  .popular-goods__wrapper {
     padding: 0 50px;
     margin-top: 0;
-
-    &::after {
-      bottom: -96px;
-      height: 26px;
-    }
   }
 
   .popular-goods__title-main {
@@ -180,5 +187,4 @@
     right: 50px;
     width: 525px;
   }
-
 }
