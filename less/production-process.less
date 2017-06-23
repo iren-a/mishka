@@ -22,6 +22,11 @@
   width: 260px;
   background: url("../img/video-mobile@1x.jpg") no-repeat;
   margin-left: -31px;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+    background-size: cover;
+  }
 }
 
 .production-process__video-btn {
@@ -99,6 +104,12 @@
     order: -1;
     width: 668px;
     min-height: 455px;
+    background: url("../img/video-tablet@1x.jpg") no-repeat;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+      background-size: cover;
+    }
   }
 
   .production-process__action-buy {
@@ -112,8 +123,11 @@
   .production-process {
     position: relative;
     width: 1050px;
+    height: 455px;
     padding-left: 760px;
     padding-right: 57px;
+    margin-top: 25px;
+    margin-bottom: 105px;
   }
 
   .production-process__title {
@@ -126,22 +140,30 @@
     left: 0;
   }
 
+
   .production-process__video {
     position: absolute;
     margin: 0;
     top: 0;
     left: 0;
+    background: url("../img/video-desktop@1x.jpg") no-repeat;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+      background-size: cover;
+    }
   }
 
   .production-process__descr {
     font-size: 15px;
     line-height: 30px;
     margin-top: 10px;
-    margin-bottom: 42px;
+    margin-bottom: 0;
     padding-right: 0;
   }
 
   .production-process__action-buy {
     width: 230px;
+    margin-top: 45px;
   }
 }

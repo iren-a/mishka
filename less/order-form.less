@@ -40,8 +40,26 @@
   }
 }
 
+.order-form__fieldset--tel,
+.order-form__fieldset--email {
+  margin-top: 35px;
+}
+
+.order-form__fieldset--tel .order-form__legend,
+.order-form__fieldset--email .order-form__legend {
+  margin-bottom: 10px;
+}
+
+
 .order-form__input-container {
-  margin-bottom: 23px;
+  &:not(:last-child) {
+    margin-bottom: 23px;
+  }
+}
+
+.order-form__fieldset--name .order-form__input-container {
+  margin-top: 0;
+  margin-bottom: 18px;
 }
 
 .order-form__label {
@@ -52,6 +70,10 @@
   padding-top: 10px;
   padding-bottom: 10px;
   height: 38px;
+}
+
+.order-form__fieldset--name .order-form__field-label {
+  margin-bottom: 7px;
 }
 
 .order-form__label::before {
@@ -66,10 +88,21 @@
   cursor: pointer;
 }
 
+.order-form__input:hover ~ .order-form__label::before {
+  border-color: #62d1ba;
+}
+
+.order-form__input:active ~ .order-form__label::before {
+  border-color: #c7c7c7;
+}
+
 .order-form__label--radio::before {
   border-radius: 50%;
 }
 
+.order-form__inner-container {
+  position: relative;
+}
 
 .order-form__input {
   display: none;
@@ -86,6 +119,7 @@
   background-color: #62d1ba;
 }
 
+
 .order-form__input:checked ~ .order-form__label--checkbox::after  {
   position: absolute;
   content: "";
@@ -93,12 +127,8 @@
   left: 8px;
   width: 25px;
   height: 25px;
-  background: white url("../img/icon-tick.svg") no-repeat;
+  background: transparent url("../img/icon-tick.svg") no-repeat;
   background-size: contain;
-}
-
-.order-form__field-label {
-  display: block;
 }
 
 .order-form__field {
@@ -106,6 +136,7 @@
   width: 100%;
   height: 47px;
   border: none;
+  outline: none;
   background: 0 0;
   border-bottom: 2px solid black;
   box-sizing: border-box;
@@ -114,9 +145,32 @@
   line-height: 18px;
 }
 
+.order-form__field-svg {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  fill: #cccccc;
+}
+
+.order-form__field:hover,
+.order-form__field:focus {
+  border-color: #62d1ba;
+}
+
+.order-form__field:hover ~ .order-form__field-svg,
+.order-form__field:focus ~ .order-form__field-svg {
+  fill: #62d1ba;
+}
+
+.order-form__field-label {
+  display: block;
+}
+
+
 .order-form__textarea {
   width: 100%;
   max-width: 100%;
+  min-height: 140px;
   box-sizing: border-box;
   padding: 18px;
 }
@@ -125,72 +179,220 @@
   font-size: 14px;
   line-height: 16px;
   color: @color-dark-grey;
+  margin-bottom: 30px;
 }
 
 .order-form__submit {
   width: 100%;
+  margin-bottom: 55px;
 }
 
 @media @tablet-width {
   .order-form {
-    padding: 0 50px;
+    padding: 0;
     position: relative;
+  }
+
+  .order-form__descr {
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 85px;
+    margin-bottom: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .order-form__fieldset {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    &--color,
+    &--tel,
+    &--email {
+      background-color: @color-base-gray;
+    }
+
+    &--type {
+      padding-bottom: 40px;
+    }
+
+    &--color {
+      padding-top: 50px;
+      padding-bottom: 35px;
+    }
+
+    &--name {
+      padding-top: 25px;
+      padding-bottom: 20px;
+    }
+
+    &--tel {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 52px;
+      padding-bottom: 30px;
+    }
+
+    &--email {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-bottom: 52px;
+    }
+
+    &--comment {
+      padding-top: 20px;
+      padding-bottom: 50px;
+    }
+
+  }
+
+  .order-form__fieldset,
+  .order-form__field {
+    font-size: 19px;
+    line-height: 18px;
   }
 
   .order-form__legend {
+    display: block;
+    box-sizing: border-box;
     width: 167px;
-    margin: 0;
+    flex-grow: 0;
+    margin: 10px 0;
+
+    &::after {
+      display: none;
+    }
   }
 
   .order-form__inner-container {
     display: flex;
     flex-wrap: wrap;
-    width: 495px;
+    flex-grow: 1;
+    flex-basis: 400px;
   }
 
-  .order-form__fieldset--type .order-form__input-container {
-    flex-basis: 60%;
+  .order-form__label {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 80px;
+    padding-right: 0;
+   }
+
+  .order-form__label::before {
+    width: 52px;
+    height: 52px;
   }
+
+  .order-form__input-container:not(:last-child) {
+    margin-bottom: 35px;
+  }
+
+
+  .order-form__input:checked ~ .order-form__label--radio::after  {
+    top: 16px;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .order-form__input:checked ~ .order-form__label--checkbox::after  {
+    top: 12px;
+    left: 8px;
+    width: 35px;
+    height: 35px;
+  }
+
 
   .order-form__fieldset--color .order-form__input-container {
-    flex-basis: 40%;
+    flex-basis: 50%;
   }
 
   .order-form__fieldset--name .order-form__input-container {
-    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .order-form__fieldset--name .order-form__field-label {
+    margin-right: 25px;
+  }
+
+
+  .order-form__field {
+    padding-left: 15px;
+  }
+
+  .order-form__field-svg {
+    right: 20px;
   }
 
   .order-form__footnote {
     position: absolute;
-    bottom: 0;
+    bottom: -15px;
     right: 50px;
+    font-size: 17px;
+    line-height: 30px;
+   }
+
+  .order-form__submit {
+    width: 230px;
+    margin-left: 50px;
+    margin-bottom: 0;
   }
 }
 
 @media @desktop-width {
   .order-form {
-    padding: 0 100px;
+    padding: 0;
+  }
+
+  .order-form__descr {
+    padding-left: 225px;
+    padding-right: 225px;
   }
 
   .order-form__legend {
     width: 175px;
+    text-align: center;
+  }
+
+  .order-form__fieldset--name,
+  .order-form__fieldset--tel,
+  .order-form__fieldset--email,
+  .order-form__fieldset--comment {
+    padding-right: 225px;
   }
 
   .order-form__inner-container {
     width: 875px;
   }
 
+  .order-form__fieldset--type .order-form__input-container {
+    flex-basis: 100%;
+  }
+
   .order-form__fieldset--color .order-form__input-container {
     flex-basis: 30%;
   }
 
+  .order-form__field-svg {
+    right: 10px;
+  }
+
+
+  .order-form__submit {
+    margin-left: 225px;
+  }
+
   .order-form__footnote {
-    right: 100px;
+    right: 225px;
   }
 
 }
