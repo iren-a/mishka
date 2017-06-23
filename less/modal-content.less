@@ -1,10 +1,23 @@
 .modal-content {
+  display: none;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  min-height: 337px;
+  padding: 0 30px 45px;
+  box-sizing: border-box;
+  z-index: 100;
+  text-align: center;
+  color: black;
   background-color: white;
   border-top: 1px solid @color-gray;
   border-bottom: 1px solid @color-gray;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-family: @font-family-base;
+  box-shadow: 0 5px 10px -5px rgba(0, 1, 1, .25);
 }
 
 .modal-content__title {
@@ -13,6 +26,8 @@
   font-weight: bold;
   color: black;
   text-transform: uppercase;
+  padding-top: 30px;
+  margin: 0 50px 25px;
 }
 
 .modal-content__note {
@@ -21,12 +36,75 @@
   font-weight: bold;
   color: @color-dark-grey;
   text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.modal-content__form {
+  font-size: 0;
+}
+
+.modal-content__input {
+  display: none;
 }
 
 .modal-content__label {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 80px;
+  height: 52px;
   font-size: 17px;
   line-height: 16px;
   font-weight: bold;
   color: @color-dark-grey;
   text-transform: uppercase;
+
+  &:not(:last-of-type) {
+    margin-right: 7px;
+  }
+}
+
+.modal-content__label::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  transform: translateY(-50%);
+  width: 82px;
+  height: 52px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border: 2px solid @color-light-gray;
+  cursor: pointer;
+}
+
+.modal-content__input:checked + .modal-content__label::before {
+  border: 2px solid #62d1ba;
+}
+
+.modal-content__action-add {
+  margin-top: 20px;
+  width: 100%;
+}
+
+@media @tablet-width {
+  .modal-content {
+    width: 567px;
+    padding-left: 108px;
+    padding-right: 108px;
+    border: 1px solid @color-gray;
+  }
+
+  .modal-content__title {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .modal-content__label {
+    width: 111px;
+  }
+
+  .modal-content__label::before {
+    width: 111px;
+  }
 }

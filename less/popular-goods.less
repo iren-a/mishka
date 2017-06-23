@@ -1,9 +1,21 @@
 .popular-goods {
   .container();
+  position: relative;
   color: @color-dark-grey;
   box-sizing: border-box;
   padding: 0 30px;
   margin-top: 29px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    width: 100%;
+    height: 6px;
+    background: url(../img/bg-zigzag-line.svg) repeat-x;
+    background-size: contain;
+  }
 }
 
 .popular-goods__title {
@@ -63,6 +75,12 @@
   .popular-goods {
     position: relative;
     padding: 0 50px;
+    margin-top: 50px;
+
+    &::after {
+      bottom: -70px;
+      height: 17px;
+    }
   }
 
   .popular-goods__title {
@@ -113,7 +131,7 @@
   .popular-goods__image {
     position: absolute;
     z-index: -2;
-    top: 90px;
+    top: 105px;
     right: 50px;
   }
 }
@@ -121,8 +139,13 @@
 @media @desktop-width {
   .popular-goods {
     padding: 0 50px;
-  }
+    margin-top: 0;
 
+    &::after {
+      bottom: -96px;
+      height: 26px;
+    }
+  }
 
   .popular-goods__title-main {
     font-size: 53px;
@@ -152,8 +175,8 @@
   }
 
   .popular-goods__image {
-    top: 10px;
-    right: 100px;
+    top: -50px;
+    right: 50px;
   }
 
 }
