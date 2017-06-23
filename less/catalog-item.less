@@ -80,7 +80,10 @@
     display: flex;
     width: auto;
     height: 334px;
-    margin-bottom: 54px;
+
+    &:not(:last-child) {
+      margin-bottom: 54px;
+    }
   }
 
   .catalog-item__image {
@@ -122,7 +125,10 @@
     display: block;
     width: 314px;
     min-height: 660px;
-    margin-bottom: 30px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   .catalog-item__image {
