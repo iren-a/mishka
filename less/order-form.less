@@ -10,6 +10,7 @@
   line-height: 24px;
   color: @color-dark-grey;
   margin: 0;
+  padding-top: 2px;
 }
 
 .order-form__fieldset {
@@ -40,6 +41,22 @@
   }
 }
 
+.order-form__fieldset--type {
+  margin-top: 26px;
+}
+
+.order-form__fieldset--color {
+  margin-top: 33px;
+}
+
+.order-form__fieldset--name {
+  margin-top: 33px;
+}
+
+.order-form__fieldset--name .order-form__legend {
+  margin-bottom: 28px;
+}
+
 .order-form__fieldset--tel,
 .order-form__fieldset--email {
   margin-top: 35px;
@@ -54,6 +71,10 @@
   &:not(:last-child) {
     margin-bottom: 23px;
   }
+}
+
+.order-form__fieldset--type .order-form__input-container {
+  margin-bottom: 21px;
 }
 
 .order-form__fieldset--name .order-form__input-container {
@@ -138,8 +159,7 @@
   background: 0 0;
   border-bottom: 2px solid black;
   box-sizing: border-box;
-  font-size: 17px;
-  font-weight: 400;
+  font-size: 18px;
   line-height: 18px;
 }
 
@@ -176,7 +196,7 @@
   font-size: 14px;
   line-height: 16px;
   color: @color-dark-grey;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .order-form__submit {
@@ -193,7 +213,7 @@
   .order-form__descr {
     font-size: 17px;
     line-height: 30px;
-    margin-top: 85px;
+    margin-top: 70px;
     margin-bottom: 60px;
     padding-left: 50px;
     padding-right: 50px;
@@ -215,12 +235,13 @@
     }
 
     &--type {
-      padding-bottom: 40px;
+      padding-bottom: 45px;
     }
 
     &--color {
-      padding-top: 50px;
-      padding-bottom: 35px;
+      padding-top: 55px;
+      padding-bottom: 30px;
+      margin-top: 0;
     }
 
     &--name {
@@ -349,6 +370,7 @@
   .order-form__descr {
     padding-left: 225px;
     padding-right: 225px;
+    margin-top: 85px;
   }
 
   .order-form__legend {
