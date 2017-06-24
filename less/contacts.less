@@ -30,7 +30,7 @@
 .contacts__value,
 .contacts__type {
   vertical-align: top;
-  padding-bottom: 30px;
+  padding-bottom: 28px;
 }
 
 .contacts__link {
@@ -50,8 +50,16 @@
 
 .contacts__map {
   margin-left: -30px;
+  margin-top: 3px;
   width: 320px;
-  background-color: @color-light-gray;
+  background-image: url(../img/map-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
 }
 
 .contacts__action-write {
@@ -62,7 +70,7 @@
   .contacts {
     position: relative;
     padding: 0 50px;
-    margin-top: 130px;
+    margin-top: 134px;
   }
 
   .contacts__icon-svg {
@@ -75,7 +83,7 @@
   .contacts__title {
     font-size: 43px;
     line-height: 50px;
-    margin-bottom: 40px;
+    margin-bottom: 44px;
   }
 
   .contacts__info tbody {
@@ -98,11 +106,20 @@
 
   .contacts__map {
     margin-left: -50px;
+    margin-top: 0;
     width: 768px;
+    background-image: url(../img/map-tablet@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
   }
 
   .contacts__action-write {
-    width: 230px;
+    width: 228px;
     margin: 55px auto;
   }
 }
@@ -111,8 +128,8 @@
   .contacts {
     padding-left: 225px;
     padding-right: 50px;
-    margin-top: 228px;
-    margin-bottom: 100px;
+    margin-top: 230px;
+    margin-bottom: 104px;
   }
 
   .contacts__icon-svg {
@@ -135,11 +152,19 @@
     position: absolute;
     top: -70px;
     right: 50px;
+    background-image: url(../img/map-desktop@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
   }
 
   .contacts__action-write {
     margin-left: 5px;
-    margin-top: 42px;
+    margin-top: 48px;
   }
 
 }
