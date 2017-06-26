@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-contrib-less");
   grunt.loadNpmTasks("grunt-browser-sync");
   grunt.loadNpmTasks("grunt-contrib-watch");
@@ -11,7 +11,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-svgmin");
   grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks("grunt-contrib-clean");
-
 
 
   grunt.initConfig({
@@ -53,11 +52,14 @@ module.exports = function(grunt) {
       style: {
         options: {
           processors: [
-            require("autoprefixer")({browsers: [
-              "last 2 versions"
-            ]}),
+            require("autoprefixer")({
+              browsers: [
+                "last 2 versions"
+              ]
+            }),
             require("css-mqpacker")({
-              sort: false })
+              sort: false
+            })
           ]
         },
         src: "build/css/*.css"
@@ -98,12 +100,12 @@ module.exports = function(grunt) {
       style: {
         options: {
           report: "gzip"
-          },
-          files: {
-            "build/css/style.min.css": ["build/css/style.css"]
-          }
+        },
+        files: {
+          "build/css/style.min.css": ["build/css/style.css"]
         }
-      },
+      }
+    },
 
     imagemin: {
       images: {
