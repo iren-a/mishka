@@ -10,6 +10,7 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-less": "1.4.0",
+    "grunt-contrib-uglify": "^3.0.1",
     "grunt-contrib-watch": "1.0.0",
     "grunt-csso": "^2.2.0",
     "grunt-postcss": "0.8.0",
@@ -30,7 +31,7 @@
   "private": true,
   "scripts": {
     "build": "grunt build",
-    "start": "npm run build \u0026\u0026 grunt serve",
+    "start": "npm run build && grunt serve",
     "test": "editorconfig-cli"
   },
   "version": "0.1.0"
