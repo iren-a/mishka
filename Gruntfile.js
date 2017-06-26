@@ -11,7 +11,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-svgmin");
   grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks("grunt-contrib-clean");
-  grunt.loadNpmTasks("grunt-contrib-uglify");
 
 
   grunt.initConfig({
@@ -108,17 +107,6 @@ module.exports = function (grunt) {
       }
     },
 
-    minified: {
-      files: {
-        src: "js/**/*.js",
-        dest: "build/js/"
-      },
-      options: {
-        sourcemap: true,
-        allinone: false
-      }
-    },
-
     imagemin: {
       images: {
         options: {
@@ -164,7 +152,6 @@ module.exports = function (grunt) {
     "less",
     "postcss",
     "csso",
-    "minified",
     "symbols",
     "imagemin"
   ])
