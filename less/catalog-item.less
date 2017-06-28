@@ -130,9 +130,11 @@
 
 @media @desktop-width {
   .catalog-item {
-    display: block;
-    width: 314px;
-    min-height: 660px;
+    display: flex;
+    flex-direction: column;
+    width: 316px;
+    margin-bottom: 30px;
+    //min-height: 660px;
 
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -147,13 +149,16 @@
 
   .catalog-item__container {
     width: auto;
+    flex-grow: 1;
     min-height: 196px;
+  }
+
+  .catalog-item__title {
+    padding-right: 20px;
   }
 
   .calalog-item__buy {
     margin-top: 0;
     margin-bottom: 0;
   }
-
-
 }
