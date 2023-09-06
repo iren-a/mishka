@@ -2,7 +2,7 @@
 
 Верстка сайта интернет-магазина.
 
-![Screenshot](screenshots/header.png)
+![Screenshot](screenshots/main.png)
 
 ---
 
